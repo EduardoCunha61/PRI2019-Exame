@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    .w3-container
+        h1 Diploma 
+            =title
+        table.w3-table-all
+            tr
+                th Data
+                th Sumário
+                th Link
+                th Entidades
+
+                tr
+                    td= diploma.data
+                    td= diploma.sumario
+                    td  
+                        a(href=diploma.link)= diploma.link
+                    td
+                        each entidade in diploma.entidades
+                            a(href=('http://clav-api.dglab.gov.pt/api/entidades/' + JSON.stringify(entidade) + 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1Nzg4NjAwNTQsImV4cCI6MTU4MTQ1MjA1NH0.HIlH4_Ao6504qaLhhbZ2_OtDzaZaG5FeYy-Yc2d9lwQ'))= JSON.stringify(entidade) 
+                tr
+                    td= diploma.processos

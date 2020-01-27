@@ -1,0 +1,15 @@
+﻿Ambos os exercicios sao acedidos em localhost:3000
+
+Exercicio 1:
+Foi feita a conversão do ficheiro para json e importado no mongo através do comando
+mongoimport -d obras -c obras --jsonArray arquivo-musica-digital.json
+
+Seguidamente, as 5 primeiras queries do exercicio estão implementadas, no entanto, a 4ª e a 5ª querie, estão em comentário no ficheiro api/obras.
+Estão funcionais, no entanto, dá problemas com a rota definida na alínea a). Para executarem corretamente, é necessário colocar em comentário a 
+listagem total das obras e retirar o comentário do valor req.query.by que se pretende executar.
+
+Exercicio 2:
+A primeira alínea está feita com sucesso, com o retorno de todos os diplomas com os respetivos campos com ligação para um dado diploma no seu id.
+A segunda alínea também está funcional, sendo que é demonstrada a página de um diploma com os respetivos campos. Tambem foi inserida uma 
+hiperligaçao para o proprio link 
+Ainda tentei definir algumas queries no mongo para as entidades nos controllers da aplicação, mas não consegui concluir.

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    .w3-container
+        h1 Lista de Diplomas CLAV
+        table.w3-table-all
+            tr
+                th Id do Diploma
+                th Data
+                th Tipo
+                th Número
+                th Sumário
+            each diploma in lista
+                tr
+                    td  
+                      a(href='/'+diploma.id)= diploma.id 
+                    td= diploma.data
+                    td= diploma.tipo
+                    td= diploma.numero
+                    td= diploma.sumario
